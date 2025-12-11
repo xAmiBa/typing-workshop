@@ -21,13 +21,7 @@ def find_user(users: Any, user_id: int) -> Any:
     return None
 
 
-def dangerous_any_example(value: Any) -> int:
-    # Mypy won't complain about this, but it will crash if value is a string!
-    return value * 2
-
-
 # Usage
-result1 = process_user_data("not a dict")
-result2 = calculate_total({"item": "wrong type"})
+result1 = process_user_data({"name": "Amina", "age": 30})
+result2 = calculate_total([{"item": "wrong type"}])
 result3 = find_user(None, 123)
-result4 = dangerous_any_example("hello")
